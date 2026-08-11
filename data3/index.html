@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전국 공공기관 CCTV 설치 및 운영 현황 보고서</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                <a href="../index.html" class="bg-indigo-800 hover:bg-indigo-700 text-indigo-200 hover:text-white p-2.5 rounded-xl transition flex items-center justify-center text-sm font-medium mr-1" title="홈으로 이동">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <div class="bg-indigo-700 p-2 rounded-xl text-indigo-200">
+                    <i class="fa-solid fa-video text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold">전국 공공기관 CCTV 운영 현황</h1>
+                    <p class="text-xs text-indigo-300">공공 영상정보처리기기 인프라 분석 보고서</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs px-3 py-1 rounded-full font-medium">
+                    <i class="fa-solid fa-circle text-[8px] mr-1 animate-pulse"></i> 실시간 데이터 연동
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-8 space-y-8">
+
+        <section>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">📊 주요 지표 요약 (Dashboard)</h2>
+                <p class="text-sm text-slate-500 mt-1">전국 공공기관 설치·운영 현황 핵심 지표 요약</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition flex items-center space-x-4">
+                    <div class="bg-indigo-50 text-indigo-600 p-4 rounded-xl text-2xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">총 설치 대수</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">2,054,387<span class="text-sm font-normal text-slate-500 ml-1">대</span></h3>
+                        <p class="text-xs text-emerald-600 font-medium mt-1"><i class="fa-solid fa-arrow-up mr-1"></i> 전년 대비 4.9% 증가</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition flex items-center space-x-4">
+                    <div class="bg-sky-50 text-sky-600 p-4 rounded-xl text-2xl">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">주요 설치 목적</p>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">생활방범 및 시설안전</h3>
+                        <p class="text-xs text-sky-600 font-medium mt-1"><i class="fa-solid fa-check mr-1"></i> 일상 치안 인프라 주도</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition flex items-center space-x-4">
+                    <div class="bg-violet-50 text-violet-600 p-4 rounded-xl text-2xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">관제센터 연계</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">217<span class="text-sm font-normal text-slate-500 ml-1">개 지자체</span></h3>
+                        <p class="text-xs text-violet-600 font-medium mt-1"><i class="fa-solid fa-circle-nodes mr-1"></i> 통합관제 시스템 구축</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
+            <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+                <i class="fa-solid fa-chart-line text-indigo-600 mr-2"></i> 연도별 CCTV 설치 대수 추이
+            </h3>
+            <p class="text-sm text-slate-500 mb-6">범죄 예방, 시설 안전, 교통 단속 등 사회 질서 유지를 위한 핵심 수단 데이터</p>
+            
+            <div class="space-y-4">
+                <!-- Bar 2023 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-1">
+                        <span class="text-slate-700">2023년</span>
+                        <span class="text-slate-900">1,767,894대</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
+                        <div class="bg-indigo-300 h-full rounded-full transition-all duration-1000" style="width: 86%;"></div>
+                    </div>
+                </div>
+                <!-- Bar 2024 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-1">
+                        <span class="text-slate-700">2024년</span>
+                        <span class="text-slate-900">1,957,790대</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
+                        <div class="bg-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <!-- Bar 2025 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-1">
+                        <span class="text-slate-700">2025년</span>
+                        <span class="text-slate-900">2,054,387대</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
+                        <div class="bg-indigo-600 h-full rounded-full transition-all duration-1000" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-100 text-sm text-slate-600">
+                <span class="font-semibold text-slate-900">💡 성장 요인 분석:</span> 
+                신도시 개발, 산업단지 확장 및 외부 유입 인구 증가에 따른 물리적 감시 구역 확대와 어린이 보호, 골목길 방범 등 생활 밀착형 방범 수요가 급증한 결과입니다.
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left: Purpose breakdown -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+                        <i class="fa-solid fa-pie-chart text-indigo-600 mr-2"></i> 설치 목적별 현황
+                    </h3>
+                    <p class="text-sm text-slate-500 mb-6">활용 목적에 따른 분류 및 비중</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-medium">
+                                <span class="text-slate-700">생활방범 및 어린이 보호</span>
+                                <span class="text-indigo-600 font-bold">55%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3">
+                                <div class="bg-indigo-600 h-3 rounded-full" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-medium">
+                                <span class="text-slate-700">시설안전 및 화재예방</span>
+                                <span class="text-sky-600 font-bold">25%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3">
+                                <div class="bg-sky-500 h-3 rounded-full" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-medium">
+                                <span class="text-slate-700">교통단속 및 교통정보 수집</span>
+                                <span class="text-emerald-600 font-bold">20%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3">
+                                <div class="bg-emerald-500 h-3 rounded-full" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-400 mt-6 pt-4 border-t border-slate-100">
+                    * 주거지 인근 골목길, 공공청사, 주요 도로 등 목적별 맞춤형 인프라 분배 확인
+                </div>
+            </div>
+
+            <!-- Right: Conclusion and Implications -->
+            <div class="bg-indigo-900 text-white rounded-2xl p-6 md:p-8 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-circle-check text-indigo-300 mr-2"></i> 결론 및 시사점
+                    </h3>
+                    <p class="text-xs text-indigo-200 mb-6">국민 안전을 위한 인프라 발전 방향</p>
+
+                    <ul class="space-y-4 text-sm text-indigo-100">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="text-white block mb-0.5">인프라의 일상화 정착</strong>
+                                CCTV는 더 이상 특수 목적용 장비가 아닌 국민의 일상 안전을 지키는 기본 사회 안전망으로 자리 잡았습니다.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="text-white block mb-0.5">향후 과제 및 고도화</strong>
+                                대규모 개인영상정보의 안전한 관리, 엄격한 프라이버시 보호 규정 준수, 그리고 AI 기반 이상징후 감지 지능형 관제 시스템의 도입이 필수적입니다.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-indigo-800 text-xs text-indigo-300 flex justify-between items-center">
+                    <span>데이터 출처: 공공기관 정보공개 포털</span>
+                    <button onclick="window.print()" class="bg-indigo-800 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg transition font-medium">
+                        <i class="fa-solid fa-print mr-1"></i> 보고서 인쇄
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4">
+            전국 공공기관 CCTV 설치 및 운영 현황 분석 보고서 &copy; 2026. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
